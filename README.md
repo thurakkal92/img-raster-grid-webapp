@@ -168,6 +168,40 @@ export const CellContextProvider = ({ rows, columns, children }) => {
 };
 ```
 
+## Unit test added
+
+```javascript
+path: src / views / ImageGridView / ImageGridView.test.js;
+path: src / views / SidebarView / SidebarView.test.js;
+
+// ImageGridView.test.js
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import ImageGridView from './index';
+import { useCellContext } from '../../hooks/useCellContext';
+
+jest.mock('../../hooks/useCellContext'); // Mock the context hook
+
+describe('ImageGridView', () => {
+    beforeEach(() => {
+        // Mock context values
+        useCellContext.mockReturnValue({
+            cells: [
+                { id: '1 - 1', row: 1, col: 1, name: 'Cell 1', active: true, hover: false },
+                { id: '1 - 2', row: 1, col: 2, name: 'Cell 2', active: false, hover: false },
+                { id: '1 - 3', row: 1, col: 3, name: 'Cell 3', active: true, hover: true },
+                { id: '2 - 1', row: 2, col: 1, name: 'Cell 4', active: true, hover: false },
+                { id: '2 - 2', row: 2, col: 2, name: 'Cell 5', active: true, hover: false },
+                { id: '2 - 3', row: 2, col: 3, name: 'Cell 6', active: true, hover: false }
+            ],
+            columns: 3
+        });
+    });
+
+    it('renders the main container and image correctly', () => {
+    ...
+```
+
 ## Configurable n x m grid support
 
 Any n x m grid can be added here. Depends on the rows and columns entered, it will generate n x m grid overlay over the image.
