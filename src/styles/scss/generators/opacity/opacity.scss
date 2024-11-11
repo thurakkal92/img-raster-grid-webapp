@@ -1,0 +1,16 @@
+/* -----------------------------------
+  Opacity Generator
+  Generates utility classes for opacity
+  based on config
+---------------------------------------
+  1. Opacity
+------------------------------------ */
+
+// ------------------------------
+// Opacity
+// ------------------------------
+@each $opacity in config("opacity") {
+  .o-#{$opacity} {
+    opacity: $opacity / 100;
+  }
+}

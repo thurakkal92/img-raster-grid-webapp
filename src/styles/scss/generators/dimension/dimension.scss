@@ -1,0 +1,50 @@
+/* -----------------------------------
+  Dimensions Generator
+  Generates utility classes for widths and
+  heights based on config
+---------------------------------------
+  1. Widths
+  2. Heights
+------------------------------------ */
+
+// ------------------------------
+// Widths
+// ------------------------------
+@each $width, $value in config("dimensions.width") {
+  .w-#{$width} {
+    width: $value;
+  }
+
+  .wmx-#{$width} {
+    max-width: $value;
+  }
+
+  .wmn-#{$width} {
+    max-width: $value;
+  }
+}
+
+// ------------------------------
+// Height
+// ------------------------------
+@each $height in config("dimensions.height") {
+  .h-#{$height} {
+    height: $height * 4px;
+  }
+}
+
+.h-100p {
+  height: 100%;
+}
+
+.w-100p {
+  width: 100%;
+}
+
+.h-50p {
+  height: 50%;
+}
+
+.w-50p {
+  width: 50%;
+}

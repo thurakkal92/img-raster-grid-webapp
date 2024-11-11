@@ -1,0 +1,19 @@
+/* -----------------------------------
+  Box Shadow Generator
+  Generates utility classes for box shadow
+  based on config
+---------------------------------------
+  1. Box Sizing
+------------------------------------ */
+
+// ------------------------------
+// Box Sizing
+// ------------------------------
+@each $boxSize, $value in config("boxSize") {
+  .box-#{$boxSize} {
+    box-sizing: $value;
+  }
+  .bs-#{$boxSize} {
+    box-sizing: $value;
+  }
+}

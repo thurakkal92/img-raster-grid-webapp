@@ -1,0 +1,345 @@
+/* -----------------------------------
+  Stylekit
+  A Sass bases utility class framework
+
+  configuration 
+  ----------------------------------------
+  1. Spacers
+  2. Typography
+  3. Colors
+  4. Borders
+  5. Box Shadow
+  6. Box Sizing
+  7. Cursors
+  11. Opacity
+  12. Overflow
+  13. Position
+  14. Dimensions
+  15. Z Index
+------------------------------------ */
+
+$config: (
+  // ------------------------------
+  // 1. Spacers
+  // ------------------------------
+  "spacers": (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15),
+  // ------------------------------
+  // 2. Typography
+  // ------------------------------
+  "typography": ("fontFamily": ("sans": ("-apple-system",
+        "BlinkMacSystemFont",
+        "Helvetica Neue",
+        sans-serif,
+      ),
+      "serif": ("Georgia",
+        "Times New Roman",
+        "Times",
+        serif,
+      ),
+      "mono": ("SFMono-Regular",
+        "Consolas",
+        "Liberation Mono",
+        "Menlo",
+        "Courier",
+        monospace,
+      ),
+    ),
+    "fontWeight": (100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+    ),
+    "fontSize": ( // (font-size, line-height)
+      "caption": (10px, 12px),
+      "caption-2": (12px, 16px),
+      "body": (14px, 20px),
+      "body-2": (16px, 20px),
+      "body-3": (20px, 28px),
+      "heading": (24px, 32px),
+      "heading-2": (32px, 44px),
+      "heading-3": (36px, 48px),
+      "display": (48px, 56px),
+      "1": (10px, 12px),
+      "2": (12px, 16px),
+      "3": (14px, 20px),
+      "4": (16px, 20px),
+      "5": (18px, 24px),
+      "6": (20px, 28px),
+      "7": (24px, 30px),
+      "8": (28px, 36px),
+      "9": (32px, 40px),
+      "inherit": inherit,
+    ),
+    "lineHeight": ("none": 0,
+      "solid": 1,
+      "title": 1.25,
+      "copy": 1.5,
+    ),
+    "fontStyle": ("italic": italic,
+      "normal": normal,
+    ),
+    "textDecoration": ("underline": underline,
+      "none": none,
+      "line-through": line-through,
+    ),
+    "textAlign": ("left": left,
+      "right": right,
+      "center": center,
+      "justify": justify,
+    ),
+    "textTransform": ("normalcase": none,
+      "capitalize": capitalize,
+      "uppercase": uppercase,
+      "lowercase": lowercase,
+      "unset": unset,
+    ),
+    "letterSpacing": ("tight": -1px,
+      "normal": 0,
+      "wide": 1px,
+    ),
+    "fontSmoothing": ("antialiased": antialiased,
+    ),
+    "whiteSpace": ("normal": normal,
+      "nowrap": nowrap,
+    ),
+    "listStyle": ("reset": none,
+    ),
+    "textOverflow": ("ellipsis": ellipsis,
+      "clip": clip,
+      "unset": unset,
+    ),
+    "truncateText": (0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+    ),
+  ),
+  // ------------------------------
+  // 3. Colors
+  // ------------------------------
+  "colors": ( //Red
+
+    "brand": #be0000,
+    // Blue
+    "info-lighter": #5c81cc,
+    "info-light": #4774cc,
+    "info": #3366cc,
+    "info-dark": #1f58cc,
+    "info-darker": #0a4bcc,
+    // Orange
+    "waring-lighter": #f79c63,
+    "waring-light": #f78d4a,
+    "waring": #f77728,
+    "waring-dark": #f76e19,
+    "waring-darker": #f75f00,
+    // Slate
+    "text-light": #49515e,
+    "text": #37404e,
+    "text-dark": #2c3441,
+    // Green
+    "success-light": #E5FAF0,
+    "success": #5dc32c,
+    "success-dark": #55b228,
+    // Red
+    "error-light": #d4192f,
+    "error": #d0021b,
+    "error-dark": #be0219,
+
+    // Neutral
+    "white": #ffffff,
+    "grey-05": #f2f2f2,
+    "grey-10": #e6e6e6,
+    "grey-20": #cccccc,
+    "grey-30": #b3b3b3,
+    "grey-40": #999999,
+    "grey-50": #808080,
+    "grey-60": #666666,
+    "grey-70": #4d4d4d,
+    "grey-80": #333333,
+    "grey-90": #1a1a1a,
+    "black": #000000,
+    "transparent": transparent),
+  // ------------------------------
+  // 4. Borders
+  // ------------------------------
+  "borders": ("borderStyle": ("solid": solid,
+      "dashed": dashed,
+      "dotted": dotted,
+      "none": none,
+    ),
+    "borderWidth": (1,
+      2,
+      4,
+      8,
+    ),
+    "borderRadius": (0,
+      2,
+      3,
+      4,
+      100,
+    ),
+  ),
+  // ------------------------------
+  // 5. Box Shadow
+  // ------------------------------
+  "boxShadow": ("none": none,
+    // deprecated
+    "sm": 0 2px 8px rgba(59, 64, 69, 0.1),
+    // deprecated
+    "md": 0 4px 8px rgba(59, 64, 69, 0.2),
+    // deprecated
+    "lg": 0 4px 12px rgba(36, 39, 41, 0.2),
+    // deprecated
+    "0": none,
+    "1": (0 1px 3px 0 rgba(191, 180, 180, 0.1),
+      0 1px 2px 0 rgba(191, 180, 180, 0.06),
+    ),
+    "2": (0 4px 6px -1px rgba(191, 180, 180, 0.1),
+      0 2px 4px -1px rgba(191, 180, 180, 0.06),
+    ),
+    "3": (0 10px 15px -3px rgba(191, 180, 180, 0.1),
+      0 4px 6px -2px rgba(191, 180, 180, 0.05),
+    ),
+    "4": (0 20px 25px -5px rgba(191, 180, 180, 0.1),
+      0 10px 10px -5px rgba(191, 180, 180, 0.04),
+    ),
+    "5": 0 25px 50px -12px rgba(191, 180, 180, 0.25),
+  ),
+  // ------------------------------
+  // 6. Box Sizing
+  // ------------------------------
+  "boxSize": ("content": content-box,
+    "border": border-box,
+    "unset": unset,
+  ),
+  // ------------------------------
+  // 7. Cursors
+  // ------------------------------
+  "cursor": ("auto": auto,
+    "default": default,
+    "pointer": pointer,
+    "wait": wait,
+    "move": move,
+    "not-allowed": not-allowed,
+  ),
+  // ------------------------------
+  // 10. Grid
+  // ------------------------------
+  "grid": ("gridWidth": 1140px,
+    "gutterWidth": 16px,
+    "gridColumns": 24,
+  ),
+  // ------------------------------
+  // 11. Opacity
+  // ------------------------------
+  "opacity": (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100),
+  // ------------------------------
+  // 12. Overflow
+  // ------------------------------
+  "overflow": ("auto": auto,
+    "scroll": scroll,
+    "visible": visible,
+    "hidden": hidden,
+  ),
+  // ------------------------------
+  // 13. Position
+  // ------------------------------
+  "position": ("strategies": ("absolute": absolute,
+      "fixed": fixed,
+      "relative": relative,
+      "static": static,
+      "sticky": sticky,
+    ),
+    "coordinates": (0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+    ),
+  ),
+  // ------------------------------
+  // 14. Dimensions
+  // ------------------------------
+  "dimensions": ("width": ("0": 0,
+      "10": 10px,
+      "20": 20px,
+      "30": 30px,
+      "40": 40px,
+      "10p": 10%,
+      "20p": 20%,
+      "30p": 30%,
+      "40p": 40%,
+      "50p": 50%,
+      "60p": 60%,
+      "70p": 70%,
+      "80p": 80%,
+      "90p": 90%,
+      "100p": 100%,
+    ),
+    "height": (0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+    ),
+  ),
+  // ------------------------------
+  // 15. Z-index
+  // ------------------------------
+  "z-index": (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100),
+  // ------------------------------
+  // 22. Transition
+  // ------------------------------
+  "transition": ("property": ("bg": background-color,
+      "color": color,
+      "border": border,
+      "box-shadow": box-shadow,
+      "elevation": box-shadow // alias for box-shadow,
+    ),
+    "duration": ("100": 100ms,
+      "200": 200ms,
+      "300": 300ms,
+      "500": 500ms,
+      "1000": 1000,
+    ),
+  )
+);
