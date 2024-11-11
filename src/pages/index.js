@@ -7,14 +7,14 @@ import { CellContextProvider } from '../context'
 
 /**
  * Renders the Page component (entry).
- * Content wrapped inside CellContextProvider
+ * Views wrapped inside CellContextProvider
  * @returns Rendered Page component with complete UI
  */
 
 function Page() {
     return (
         // Any grid value (n x m) can be added here
-        // Currently 2 x 3 is added
+        // Currently 2 x 3 is added as per the requirement
         <CellContextProvider rows={2} columns={3}>
             <Header />
             <main role='main' className='bg-grey-05 flex' style={{ minHeight: 'calc(-44px + 100vh)' }}>

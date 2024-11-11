@@ -12,7 +12,7 @@ import { useCellContext } from '../../hooks/useCellContext';
 function SidebarView() {
 
     //Reads useful information from the custom hook useCellContext.
-    const { cells, onClick, onHover, onRowHover, onRowClick } = useCellContext();
+    const { cells, onCellClick, onCellHover, onRowHover, onRowClick } = useCellContext();
 
 
     //Group cells per rows for the Tree
@@ -56,9 +56,9 @@ function SidebarView() {
                     {expandedRows[ row ] &&
                         rows[ row ].map((cell, idx) => (
                             <ListItem
-                                onClick={() => onClick(cell.id)}
-                                onMouseEnter={() => onHover(cell.id)}
-                                onMouseLeave={() => onHover(null)}
+                                onClick={() => onCellClick(cell.id)}
+                                onMouseEnter={() => onCellHover(cell.id)}
+                                onMouseLeave={() => onCellHover(null)}
                                 key={cell.id}
                                 data-testid='list-item'
                                 endIcon={
